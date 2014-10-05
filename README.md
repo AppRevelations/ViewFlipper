@@ -32,20 +32,24 @@ For changing views by swiping you have to add SwipeGesture.
         
         
 onFling Function to detect your swipe directions.
+
 Swipe_Minimum_Distance:-Minimum distance you set for swiping.
+
 Swipe_Threshold_Velocity:-Minimum velocity with which user have to swipe.
-   public boolean onFling(MotionEvent me1, MotionEvent me2, float velocityX, float velocityY) 
+
+   public boolean onFling(MotionEvent me1, MotionEvent me2, float velocityX, float velocityY)
    {
-      try {
-   
-      //right to left swipe
+      
+       try {
+            
+          //right to left swipe
           if (me1.getX() - me2.getX() > Swipe_Minimum_Distance && Math.abs(velocityX) > Swipe_Threshold_Velocity) 
           {
               
                     return true;
           }
                
-      //left to right swip
+      //left to right swipe
          else if (me2.getX() - me1.getX() > Swipe_Minimum_Distance && Math.abs(velocityX) >Swipe_Threshold_Velocity) 
          {
                    
